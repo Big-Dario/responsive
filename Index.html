@@ -1,0 +1,642 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mother Nature Safaris</title>
+    <link rel="stylesheet" href="navigation.css"/>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Mother Nature Safaris</div>
+            <div class="nav-links">
+                <a href="#home" onclick="showSection('home')">Home</a>
+                <a href="#destinations" onclick="showSection('destinations')">Destinations</a>
+                <a href="#bookings" onclick="showSection('bookings')">Bookings</a>
+                <a href="#trips" onclick="showSection('trips')">Trips</a>
+                <a href="#about-us" onclick="showSection('about-us')">About Us</a>
+                <a href="#contact" onclick="showSection('contact')">Contact</a>
+            </div>
+            <button class="enquire-btn" onclick="openForm()">ENQUIRE</button>
+        </div>
+    </header>
+    <div class="form-popup" id="enquiryForm">
+        <h2>Enquiry Form</h2>
+        <form id="enquirySubmitForm" onsubmit="submitEnquiryForm(event)">
+            <label for="enquiry-name">Name:</label>
+            <input type="text" id="enquiry-name" name="name" required>
+            <label for="enquiry-email">Email:</label>
+            <input type="email" id="enquiry-email" name="email" required>
+            <label for="enquiry-message">Message:</label>
+            <textarea id="enquiry-message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+            <button type="button" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <!-- Main Content Sections -->
+    <main class="main-content">
+        <div id="home" class="section active">
+            <h2>Genuine Safaris</h2>
+        <h1>Genuine Difference</h1>
+        <p>Discover Mother Nature Safaris’ authentic safaris in East Africa’s iconic wilderness that make a genuine difference to local communities and conservation.</p>
+        <a href="#destinations" onclick="showSection('destinations')">Get Started</a>
+        <div class="hero-buttons">
+          <button onclick="showSection('trips')">OUR PACKAGES</button>
+          <button class="secondary" onclick="showSection('videoSection')">WATCH THE EXPERIENCE</button>
+        </div>
+      </div>
+        <div id="destinations" class="section">
+            <h2>Popular Destinations</h2>
+            <!-- Buttons to show country destinations -->
+        <div class="nav-links">
+            <button onclick="showDestinations('kenya')">Kenya</button>
+            <button onclick="showDestinations('tanzania')">Tanzania</button>
+            <button onclick="showDestinations('uganda')">Uganda</button>
+        </div>
+        <!--Kenya Section-->
+            <div id="kenya" class="country-section">
+                <h3>Kenya</h3>
+                <p>Kenya is one of Africa’s most iconic travel destinations, offering world-class safaris and stunning natural beauty. It’s home to the world-famous Maasai Mara, where visitors can witness the Great Wildebeest Migration – one of the Seven Natural Wonders of Africa. The country boasts over 50 national parks and reserves, teeming with the Big Five and other wildlife. From the snow-capped peaks of Mount Kenya to the dramatic landscapes of the Great Rift Valley and the serene, white-sand beaches of Diani and Lamu, Kenya promises unforgettable experiences. Visitors also enjoy engaging with the rich and diverse cultures of over 40 ethnic communities</p>
+                <div class="destination-card">
+                    <img src="nairobi" alt="Nairobi">
+                    <p>Located just outside Nairobi’s city center, Nairobi National Park offers a unique experience where wildlife roams free against the backdrop of city skyscrapers. This small yet diverse park is home to lions, giraffes, zebras, and over 400 bird species. It’s a haven for both wildlife enthusiasts and those seeking a quick escape from the hustle of urban life. The park also hosts the Nairobi Animal Orphanage and the Nairobi Safari Walk, where visitors can learn about conservation. Nairobi National Park is a symbol of coexistence between nature and the modern world.
+                    </p>
+                </div>
+                    <div class="destination-card">
+                            <img src="nakuru" alt="Nakuru">
+                            <p>Lake Nakuru National Park is a jewel located in Kenya’s Rift Valley, famous for its flocks of flamingos that once covered the shores of the lake. Though flamingo numbers have fluctuated, the park remains a haven for birdwatchers and wildlife enthusiasts. In addition to flamingos, the park is home to rhinos, lions, giraffes, and a variety of antelope species. Lake Nakuru’s landscape, marked by acacia forests, waterfalls, and a serene lake, provides an idyllic setting for a safari. The park’s ecosystem also includes diverse plant life, contributing to the area’s rich biodiversity.</p>
+                     </div>
+                     <div class="destination-card">
+                        <img src="Amboseli" alt="Amboseli">
+                        <p>Famed for its stunning views of Mount Kilimanjaro, Amboseli National Park is one of Kenya’s most popular safari destinations. The park is home to a large elephant population and offers excellent wildlife viewing, especially at the Amboseli swamps. Visitors can enjoy game drives, bird watching, and guided nature walks. The surrounding Maasai communities add cultural depth to the experience, and the park's varied landscapes—from open plains to wetlands—make it a photographer's dream. Amboseli provides a perfect mix of wildlife, natural beauty, and adventure, all against the backdrop of Africa’s tallest peak.
+                        </p>
+                    </div>
+                        <div class="destination-card">
+                                <img src="Tsavo" alt="Tsavo">
+                                <p>Spanning across two regions, Tsavo East and Tsavo West, Tsavo National Park is one of Kenya’s largest and oldest parks. Known for its red elephants, Tsavo offers vast savannahs, mountains, and diverse wildlife. Game drives are spectacular here, where visitors can spot lions, cheetahs, zebras, giraffes, and elephants. Tsavo West is famous for its volcanic hills, Mzima Springs, and the Shetani Lava Flow, while Tsavo East is a sprawling wilderness known for its open landscapes and large elephant herds. Tsavo remains a destination where one can connect with nature in its purest form.</p>
+                         </div>
+                         <div class="destination-card">
+                            <img src="maasai" alt="Maasai Mara">
+                            <p>Renowned for its breathtaking landscapes and rich wildlife, Maasai Mara is a world-class destination. The reserve is famous for the Great Migration, where millions of wildebeest, zebras, and gazelles move in search of water. The Mara also offers opportunities for game drives and hot air balloon safaris. Visitors can encounter the Big Five—lion, elephant, buffalo, leopard, and rhino—along with an array of other species. Staying in luxury lodges and tented camps, guests enjoy an authentic African safari experience, making it one of the most sought-after safari destinations globally.</p>
+                        </div>
+                            <div class="destination-card">
+                                    <img src="Lamu Island" alt="Lamu">
+                                    <p>Lamu Island is one of Kenya’s oldest and most charming coastal destinations. A UNESCO World Heritage site, Lamu preserves its ancient Swahili culture and architecture. The island’s narrow streets are perfect for strolling, and its beautiful beaches, like Shela Beach, offer pristine views and a serene environment. Lamu also offers cultural experiences such as dhow sailing, exploring historical sites, and enjoying local Swahili cuisine. Lamu is perfect for those seeking a laid-back atmosphere, rich history, and an authentic taste of Kenya's coastal culture, making it one of the most peaceful beach destinations.
+                                    </p>
+                         </div> 
+                             <div class="destination-card">
+                                <img src="Diani" alt="Diani">
+                                <p>Known for its soft, white sands and crystal-clear waters, Diani Beach is a tropical paradise on the Kenyan coast. With a vibrant marine life, it’s perfect for snorkeling, diving, and other water activities. Diani is also home to numerous luxury resorts, making it ideal for relaxation and beach holidays. The beach is lined with coconut palms and has numerous activities such as kite surfing, beach volleyball, and boat excursions. The Diani Forest and Shimba Hills National Reserve, located nearby, add an extra adventure layer to the destination, blending beach fun with wildlife exploration.
+                                </p>
+                         </div>
+                                <div class="destination-card">
+                                        <img src="Mombasa" alt="Mombasa">
+                                        <p>Mombasa, Kenya’s second-largest city, is a fusion of vibrant Swahili culture, history, and beautiful coastal scenery. The city offers attractions like Fort Jesus, a UNESCO World Heritage site, and the Mombasa Marine National Park. Visitors can relax on beaches like Nyali Beach and enjoy water sports or explore Old Town's narrow streets, filled with centuries-old architecture and spice markets. Mombasa is known for its lively atmosphere, delicious coastal cuisine, and its fusion of African, Arab, and European influences, making it a must-visit destination for both history and beach lovers.</p>
+                                 </div> 
+                                 <div class="destination-card">
+                                    <img src="samburu" alt="Samburu">
+                                    <p>Samburu National Reserve, located in northern Kenya, is a true wilderness that offers a glimpse into the country’s rugged beauty. Known for its arid landscapes and rich wildlife, it’s home to species found only in this region, like the Grevy’s zebra, Somali ostrich, and the reticulated giraffe. The Ewaso Nyiro River that runs through the reserve provides water for a wide variety of animals, making it an ideal spot for game drives and birdwatching. The reserve also offers cultural experiences with the Samburu people, who share a deep connection with the land and wildlife.</p>
+                            </div>
+                       <div class="destination-card">
+                                  <img src="watamu" alt="Watamu">
+                          <p>A hidden gem on the Kenyan coast, Watamu is famous for its pristine beaches, coral reefs, and vibrant marine life. The Watamu Marine National Park is perfect for snorkelers and divers, with clear waters and an abundance of fish species. Watamu is also a great place for bird watching, with the Arabuko-Sokoke Forest nearby, home to rare bird species. The serene beaches, such as the stunning Turtle Bay, make Watamu a peaceful retreat for travelers seeking relaxation and a connection with nature. Its unique blend of natural beauty and tranquility makes it an unforgettable coastal destination.
+                        </p>
+                      </div> 
+                          <div class="destination-card">
+                      <img src="Mount KENYA" alt="Mount Kenya National Park">
+                      <p>Mount Kenya National Park is centered around Africa’s second-highest mountain, Mount Kenya. A UNESCO World Heritage site, the park attracts trekkers, climbers, and nature enthusiasts. The diverse landscape includes glaciers, alpine meadows, and dense forests, providing a range of ecosystems to explore. Visitors can hike through lush forest trails, spot wildlife like elephants, buffaloes, and monkeys, and experience the indigenous Kikuyu culture. For those daring enough, summiting Mount Kenya offers a challenging but rewarding experience with spectacular views across the country.</p>
+               </div>      
+         </div>
+        <!-- Tanzania Section -->
+              <div id="tanzania" class="country-section">
+                 <h3>Tanzania</h3>
+            <div class="destination-card">
+            <img src="serengeti" alt="Serengeti National Park">
+            <p>Serengeti National Park is one of the world’s most famous wildlife reserves, renowned for its vast savannahs and incredible biodiversity. It’s most famous for the Great Migration, where millions of wildebeest and zebras travel across the plains in search of water. Serengeti is also home to the Big Five—lion, elephant, buffalo, leopard, and rhino—along with hundreds of other animal species. Visitors can enjoy game drives and hot air balloon safaris, all while soaking in the stunning landscapes. Serengeti’s endless plains provide an iconic African safari experience, making it a must-visit for wildlife enthusiasts.
+            </p>
+        </div>
+            <div class="destination-card">
+            <img src="pemba" alt="Pemba Island">
+            <p>Pemba Island, located to the north of Zanzibar, is less developed and less crowded, offering a peaceful and pristine environment for travelers. Known for its lush green landscapes and rich marine life, the island is perfect for diving, snorkeling, and enjoying beautiful beaches. The surrounding coral reefs are teeming with fish and marine life, making it a popular spot for divers. Pemba Island also offers an insight into rural Tanzanian life and traditional farming, with its spice plantations and serene atmosphere providing a tranquil escape from the more commercialized areas of Zanzibar.
+            </p>
+        </div>
+            <div class="destination-card">
+            <img src="mikumi" alt="Mikumi National Park">
+            <p>Mikumi National Park, located in southern Tanzania near Morogoro, is one of the country's most accessible wildlife parks, just a few hours from Dar es Salaam. Covering over 3,200 square kilometers, it features open savannahs similar to the Serengeti, making it ideal for spotting wildlife. The park is home to elephants, lions, zebras, giraffes, wildebeests, buffaloes, and hippos, along with over 400 bird species. The Mkata Floodplain is a popular viewing area where animals gather, especially during the dry season. Mikumi offers excellent game drives and is a perfect choice for visitors seeking a shorter, convenient safari experience in Tanzania.</p>
+        </div>
+            <div class="destination-card">
+            <img src="kilimanjaro" alt="Mount Kilimanjaro">
+            <p>As Africa’s highest peak, Mount Kilimanjaro offers an adventure for trekkers and mountaineers. Located in northern Tanzania, the mountain is known for its stunning landscapes, including tropical rainforests, alpine meadows, and glaciers. Trekking to the summit is a challenging feat, but one that rewards climbers with breathtaking views of the surrounding landscape and distant plains. Kilimanjaro attracts adventurers from around the world, whether they aim to conquer the summit or simply enjoy its beauty from below. The mountain’s unique ecosystems make it a remarkable destination for those seeking both challenge and natural beauty.
+            </p>
+        </div>
+            <div class="destination-card">
+            <img src="ngorongoro" alt="Ngorongoro Crater">
+            <p>Ngorongoro Crater, a UNESCO World Heritage site, is a natural wonder formed by a collapsed volcanic caldera. It is home to an exceptional array of wildlife, including lions, elephants, zebras, and rhinos, all within the crater’s verdant floor. The crater is often referred to as the "Garden of Eden" due to its rich biodiversity and stunning beauty. Visitors can enjoy game drives, bird watching, and visiting Maasai villages. The lush vegetation combined with the open savannahs creates an unforgettable safari experience, making it one of the most iconic places in East Africa for wildlife viewing.</p>
+        </div>
+            <div class="destination-card">
+            <img src="tarangire" alt="Tarangire National Park">
+            <p>Known for its large elephant herds and stunning baobab trees, Tarangire National Park offers a serene and less crowded safari experience compared to other Tanzanian parks. Located in the northern part of the country, Tarangire’s landscape includes swamps, grasslands, and acacia woodlands, providing an ideal habitat for wildlife. The park is home to numerous species, including giraffes, lions, and a wide variety of bird species. During the dry season, many animals converge at the Tarangire River, offering fantastic game viewing opportunities. Tarangire is a hidden gem for those looking to explore Tanzania's wilderness away from the crowds.</p>
+        </div>
+             <div class="destination-card">
+            <img src="tanganyika" alt="Lake Tanganyika">
+            <p>Lake Tanganyika, the world’s second-deepest freshwater lake, is located in western Tanzania. This serene lake offers visitors a chance to explore its crystal-clear waters, which are home to unique species of fish and wildlife. The surrounding area features lush landscapes, mountains, and remote villages, making it an excellent spot for hiking, canoeing, and cultural experiences. The lake is also rich in history, with ancient artifacts and fossils found in the area. Visitors can relax on the tranquil beaches, enjoy fishing, or embark on boat tours, immersing themselves in the natural beauty of this hidden gem.
+            </p>
+        </div>
+             <div class="destination-card">
+            <img src="selous" alt="Selous Game Reserve">
+            <p>The Selous Game Reserve is one of the largest protected wildlife areas in Africa. It’s an extraordinary destination for safaris, offering a diverse landscape of savannahs, rivers, and forests. The reserve is home to large populations of elephants, lions, hippos, and crocodiles. Selous stands out for its opportunities to explore by boat, offering a unique perspective of the wildlife and landscapes. The reserve also has walking safaris, where experienced guides lead you through the wild. Selous is less touristy than some other parks, providing an authentic and intimate safari experience in Tanzania.</p>
+        </div>
+             <div class="destination-card">
+            <img src="kilwa" alt="Ruins Of Kilwa">
+            <p>Kilwa Kisiwani, a UNESCO World Heritage site, is an ancient trading city on the southern coast of Tanzania. It dates back to the 9th century and was once one of the most influential Swahili coast trading hubs. Today, visitors can explore its historical ruins, including mosques, palaces, and fortresses, that offer a glimpse into the past. Kilwa Kisiwani is surrounded by beautiful beaches and is an excellent destination for those interested in history and archaeology. The site’s combination of cultural heritage and scenic surroundings makes it a unique spot to visit in Tanzania.
+            </p>
+        </div>
+            <div class="destination-card">
+            <img src="mafia" alt="Mafia Island">
+            <p>Mafia Island, part of the Mafia Archipelago, is a serene tropical paradise known for its coral reefs and abundant marine life. It’s less crowded than Zanzibar, making it ideal for travelers seeking a quiet and peaceful retreat. The island offers excellent opportunities for diving and snorkeling in its clear waters, with chances to see whale sharks, turtles, and colorful coral reefs. Mafia Island is also home to a marine park, which ensures the protection of its rich biodiversity. Visitors can explore its pristine beaches, enjoy boat trips, and immerse themselves in the island’s laid-back atmosphere.
+            </p>
+        </div>
+             <div class="destination-card">
+            <img src="saadani" alt="Saadani National Park">
+            <p>Saadani National Park is unique because it’s the only wildlife reserve in Tanzania that borders the ocean. This park offers a blend of marine and terrestrial wildlife, with species like lions, elephants, giraffes, and buffaloes living alongside coastal wildlife like dolphins and sea turtles. Saadani is less visited, offering a more tranquil safari experience, where visitors can enjoy game drives, walking safaris, and boat rides. The park’s beach also provides the perfect setting for relaxation, combining the best of both safari and beach experiences in a single destination.
+            </p>
+        </div>
+             <div class="destination-card">
+            <img src="mahale" alt="Mahale Mountans National Park">
+            <p>Located on the shores of Lake Tanganyika, Mahale Mountains National Park is one of Tanzania’s most remote and beautiful parks. The park is famous for its populations of wild chimpanzees, and visitors can join trekking expeditions to observe these fascinating primates in their natural habitat. The park’s lush rainforests, combined with the crystal-clear waters of Lake Tanganyika, create a breathtaking backdrop for wildlife viewing and hiking. Mahale is ideal for travelers seeking adventure, nature, and wildlife, offering a truly off-the-beaten-path experience in one of Tanzania’s hidden treasures.
+            </p>
+        </div>
+            <div class="destination-card">
+            <img src="ruaha.jpg" alt="Ruaha National Park">
+            <p>Ruaha National Park, Tanzania’s largest national park, spans over 20,000 square kilometers in the heart of the country. It offers a rugged, remote safari experience with fewer tourists and breathtaking landscapes of savannahs, baobab trees, and river systems. The park is known for its large populations of elephants, lions, leopards, and endangered African wild dogs. It also hosts rare antelope species like kudu, sable, and roan. Birdlife is abundant, with over 570 species recorded. The Great Ruaha River draws wildlife during the dry season, creating incredible game viewing opportunities. Ruaha is ideal for adventurous travelers seeking authentic, off-the-beaten-path safaris</p>
+        </div>
+             <div class="destination-card">
+            <img src="Zanzibar" alt="Zanzibar Beaches">
+            <p>Zanzibar is home to some of Africa’s most beautiful beaches, and Nungwi and Kendwa are two of the most popular. Nungwi, located at the northern tip of the island, is known for its golden sands and clear, turquoise waters. It’s perfect for swimming, snorkeling, and boat tours. Kendwa, just a short distance away, offers an even more tranquil atmosphere, with powdery sand and calm waters ideal for relaxation. Both beaches provide an idyllic setting for those seeking a beach getaway, combining beauty, luxury, and plenty of activities for a perfect coastal escape</p>
+         </div>
+       </div> 
+    <!-- Uganda Section -->
+        <div id="uganda" class="country-section">
+                <h3>Uganda</h3>
+                <div class="destination-card">
+                <img src="mburo.jpg" alt="Lake Mburo">
+                <p>Lake Mburo National Park is one of Uganda's most accessible national parks, located just a few hours' drive from Kampala. The park is home to a wide range of wildlife, including zebras, impalas, buffaloes, and hippos. It’s also known for its diverse birdlife, making it a popular destination for birdwatching. Visitors can enjoy game drives, boat cruises on Lake Mburo, and walking safaris, offering a unique way to explore the park’s landscapes. The park’s combination of wildlife, stunning scenery, and proximity to Uganda’s capital makes it an excellent choice for a quick safari escape.</p>
+            </div>
+                 <div class="destination-card">
+                 <img src="kidepo" alt="Kidepo">
+                 <p>Kidepo Valley National Park, located in the remote northeastern part of Uganda, is one of the country’s most untouched and pristine safari destinations. The park is home to a wide variety of wildlife, including lions, cheetahs, elephants, and giraffes. Kidepo’s unique landscapes, with vast savannahs and rocky hills, create a stunning backdrop for game drives and walking safaris. The park is also home to several indigenous ethnic groups, including the Karamojong, who offer a cultural experience for visitors. Kidepo is perfect for those seeking an off-the-beaten-path safari experience in an uncrowded, wild setting.</p>
+            </div>
+                  <div class="destination-card">
+                  <img src="queen" alt="Queen Elizabeth National Park">
+                 <p>Queen Elizabeth National Park is one of Uganda's most popular wildlife destinations. Located in the western part of the country, it offers diverse landscapes ranging from savannahs to forests and wetlands. The park is famous for its abundant wildlife, including lions, elephants, hippos, and numerous bird species. Visitors can enjoy game drives, boat cruises on the Kazinga Channel, and walking safaris. Queen Elizabeth is also home to the unique tree-climbing lions of Ishasha. The park’s combination of wildlife, scenery, and activities makes it an ideal destination for an African safari experience.
+             </p>
+                </div>
+                     <div class="destination-card">
+                     <img src="bwindi" alt="Bwindi Impenetrable National Park">
+                <p>Bwindi Impenetrable National Park is a UNESCO World Heritage site located in southwestern Uganda. Famous for its population of mountain gorillas, it offers an incredible experience for trekkers. Visitors can embark on a thrilling gorilla trekking adventure, walking through dense forest to observe these magnificent creatures in their natural habitat. Bwindi is also home to diverse wildlife and bird species, making it a paradise for nature lovers. The park’s dense, mist-covered forest and steep terrain provide a truly unique experience. It’s one of the best places in the world for gorilla trekking and wildlife encounters.
+                </p>
+                </div>
+                      <div class="destination-card">
+                      <img src="murchison" alt="Murchison Fall National Park">
+                     <p>Murchison Falls National Park is Uganda’s largest national park, known for its stunning waterfall, Murchison Falls, where the Nile River forces its way through a narrow gorge. The park offers excellent wildlife viewing, with elephants, giraffes, lions, and buffaloes roaming the savannahs. A boat cruise along the Nile provides a close-up view of hippos, crocodiles, and a variety of birds. Visitors can also take a hike to the top of the falls for a spectacular view. The park combines breathtaking natural beauty with abundant wildlife, making it one of Uganda’s top destinations.</p>
+                </div>
+                     <div class="destination-card">
+                    <img src="kibale" alt="Kibale National Park">
+                     <p>Kibale National Park is known for its incredible biodiversity, particularly its large population of chimpanzees. Situated in western Uganda, it is one of the best places in the world to see chimpanzees in the wild. Visitors can take part in chimpanzee trekking, where they walk through lush forests to observe these fascinating primates. Kibale is also home to a wide range of other primates, birds, and wildlife, making it a popular destination for nature lovers. Its dense forest, combined with its rich wildlife, offers an unforgettable adventure for those looking to experience Uganda’s natural beauty.</p>
+             </div>
+         </div>
+     </div>
+       <div id="bookings" class="section">
+  <h2>Travel Booking Questionnaire</h2>
+  <form id="bookingForm">
+    <div class="step active">
+      <label>Full Name</label>
+      <input type="text" name="fullName" required>
+    </div>
+    <div class="step">
+      <label>Nationality</label>
+      <select name="nationality" required>
+        <option value="">Select</option>
+        <option>British</option>
+        <option>French</option>
+        <option>German</option>
+        <option>Kenyan</option>
+        <option>Ugandan</option>
+        <option>Tanzanian</option>
+      </select>
+    </div>
+    <div class="step">
+      <label>Email Address</label>
+      <input type="email" name="email" required>
+    </div>
+    <div class="step">
+      <label>Where do you want to travel?</label>
+      <select name="destination" required>
+        <option value="">Select</option>
+        <option>Kenya</option>
+        <option>Uganda</option>
+        <option>Tanzania</option>
+      </select>
+    </div>
+    <div class="step">
+      <label>Number of Travellers</label>
+      <input type="number" name="travellers" min="1" required>
+    </div>
+    <div class="step">
+      <label>Preferred Date of Travel</label>
+      <input type="date" name="travelDate" required>
+    </div>
+    <div class="step">
+      <label>Date of Arrival</label>
+      <input type="date" name="arrivalDate" required>
+    </div>
+    <div class="step">
+      <label>What is your budget?</label>
+      <select name="budget" required>
+        <option value="">Select</option>
+        <option>Less than $7,000</option>
+        <option>$7,000 - $10,000</option>
+        <option>$10,000 - $15,000</option>
+        <option>$15,000+</option>
+        <option>Not Sure</option>
+      </select>
+    </div>
+    <div class="step">
+      <label>How long do you want to travel?</label>
+      <select name="duration" required>
+        <option value="">Select</option>
+        <option>Less than one WEEK</option>
+        <option>One WEEK</option>
+        <option>10 Days</option>
+        <option>2 Weeks</option>
+        <option>2 Weeks +</option>
+      </select>
+    </div>
+    <button type="button" id="nextBtn">Next</button>
+  </form>
+</div>
+</div>
+        <div id="trips" class="section">
+            <h2>Our Trips</h2>
+    <h3>Kenya – Top Safari Destinations</h3>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('maasaimara-details')">1. Maasai Mara National Reserve</h3>
+        <div id="maasaimara-details" class="details">
+            <p><strong>Safari Highlights:</strong> Home to the iconic Great Migration, Maasai Mara offers one of the most dramatic wildlife spectacles on Earth. Expect to see large herds of wildebeest and zebra crossing crocodile-infested rivers. The reserve teems with predators like lions, leopards, and cheetahs. Enjoy sunrise balloon rides, game drives across golden plains, and visit Maasai villages for cultural insights.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 3–6 days | 1–2 weeks</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('amboseli-details')">2. Amboseli National Park</h3>
+        <div id="amboseli-details" class="details">
+            <p><strong>Safari Highlights:</strong> Famous for its massive herds of elephants and stunning views of Mount Kilimanjaro, Amboseli is a photographer’s dream. Observe animals in the shadow of Africa’s tallest peak and enjoy open landscapes, marshes, and dry lake beds filled with diverse birdlife. Cultural encounters with the local Maasai communities enhance the experience.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 2–5 days | 1–2 weeks</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('lakenakuru-details')">3. Lake Nakuru National Park</h3>
+        <div id="lakenakuru-details" class="details">
+            <p><strong>Safari Highlights:</strong> Lake Nakuru is best known for its pink-hued shores covered with flamingoes. The park is also a sanctuary for endangered black and white rhinos. Visitors can expect to see Rothschild’s giraffes, lions, and leopards. It’s a compact park ideal for birdwatchers and those seeking a scenic game drive.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 2–4 days | 1 week</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('samburu-details')">4. Samburu National Reserve</h3>
+        <div id="samburu-details" class="details">
+            <p><strong>Safari Highlights:</strong> In Northern Kenya, Samburu is home to rare species such as the Grevy’s zebra, reticulated giraffe, and Beisa oryx. The Ewaso Ng’iro River attracts elephants, leopards, and crocodiles, offering exceptional game viewing. With fewer crowds and unique landscapes, it offers an intimate safari experience.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 3–5 days | 1–2 weeks</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('tsavo-details')">5. Tsavo East & West National Parks</h3>
+        <div id="tsavo-details" class="details">
+            <p><strong>Safari Highlights:</strong> Together forming Kenya’s largest protected area, Tsavo East and West feature lava flows, red-dust elephants, and the rugged Chyulu Hills. Highlights include Mzima Springs, Lugard Falls, and the Yatta Plateau—the world’s longest lava flow. Expect a blend of wildlife and wilderness.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 3–6 days | 1–2 weeks | 2–3 weeks</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('mountkenya-details')">6. Mount Kenya National Park</h3>
+        <div id="mountkenya-details" class="details">
+            <p><strong>Safari Highlights:</strong> Mount Kenya, Africa’s second-highest peak, offers spectacular mountain treks, alpine forests, and glacier views. Wildlife includes bushbucks, monkeys, and rare birds. The park provides hiking trails for all levels and the chance to summit Point Lenana for a challenging adventure.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 3–7 days | 1–2 weeks</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>Tanzania – Top Safari Destinations</h3>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('serengeti-details')">1. Serengeti National Park</h3>
+        <div id="serengeti-details" class="details">
+            <p><strong>Safari Highlights:</strong> Serengeti is Africa’s safari capital, famous for the Great Migration and boundless savannahs. Witness thousands of wildebeest and zebra in motion, hunted by big cats and crocodiles. The park also hosts elephants, rhinos, and birds of prey. Experience iconic sunsets, Maasai culture, and luxury tented camps.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 4–6 days | 1–2 weeks | 2–3 weeks</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('ngorongoro-details')">2. Ngorongoro Crater</h3>
+        <div id="ngorongoro-details" class="details">
+            <p><strong>Safari Highlights:</strong> Often called Africa’s Eden, Ngorongoro Crater holds a stunning concentration of wildlife in its collapsed caldera. Lions, black rhinos, buffaloes, and flamingos thrive here. The fertile floor and crater walls offer breathtaking scenery, cultural visits to Maasai bomas, and thrilling game drives.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 2–4 days | 1 week</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('tarangire-details')">3. Tarangire National Park</h3>
+        <div id="tarangire-details" class="details">
+            <p><strong>Safari Highlights:</strong> Tarangire is a quiet gem known for its large elephant populations and ancient baobab trees. Seasonal migration brings in zebras, wildebeest, and predators. The park offers beautiful landscapes, fewer crowds, and excellent bird watching opportunities.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 2–4 days | 1–2 weeks</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('lakemanyara-details')">4. Lake Manyara National Park</h3>
+        <div id="lakemanyara-details" class="details">
+            <p><strong>Safari Highlights:</strong> Nestled at the base of the Great Rift Valley, Lake Manyara boasts tree-climbing lions, thousands of flamingoes, and diverse terrain. The park is perfect for short, rewarding safaris filled with birdlife, hippos, and lush forest drives.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 2–3 days | Less than 1 week</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('kilimanjaro-details')">5. Mount Kilimanjaro National Park</h3>
+        <div id="kilimanjaro-details" class="details">
+            <p><strong>Safari Highlights:</strong> Trek the world’s tallest freestanding mountain with expert guides. Explore Kilimanjaro’s diverse ecological zones from rainforest to glaciers. Whether you aim to summit Uhuru Peak or hike lower trails, Kilimanjaro offers unmatched adventure and achievement.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 5–7 days | 1–2 weeks | 2–3 weeks</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('zanzibar-details')">6. Zanzibar Island (Add-on)</h3>
+        <div id="zanzibar-details" class="details">
+            <p><strong>Safari Highlights:</strong> Wind down with a beach retreat on Zanzibar Island. Explore coral reefs, historic Stone Town, and aromatic spice plantations. Enjoy water sports, dhow cruises, and relaxed island living—perfect after a dusty safari.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 3–6 days | 1–2 weeks</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>Uganda – Top Safari Destinations</h3>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('bwindi-details')">1. Bwindi Impenetrable Forest</h3>
+        <div id="bwindi-details" class="details">
+            <p><strong>Safari Highlights:</strong> Trek deep into the jungle to meet endangered mountain gorillas in one of the world’s most biodiverse rainforests. Bwindi is a UNESCO site and offers challenging hikes, birdwatching, and cultural visits to Batwa communities. A life-changing experience.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 3–5 days | 1–2 weeks</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('murchison-details')">2. Murchison Falls National Park</h3>
+        <div id="murchison-details" class="details">
+            <p><strong>Safari Highlights:</strong> This park is bisected by the Nile River, culminating in the dramatic Murchison Falls. Wildlife includes elephants, hippos, crocodiles, and giraffes. Enjoy boat cruises to the base of the falls and expansive savannah game drives.</p>
+            
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            <p><strong>Duration:</strong> 3–6 days | 1–2 weeks</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('queenelizabeth-details')">3. Queen Elizabeth National Park</h3>
+        <div id="queenelizabeth-details" class="details">
+            <p><strong>Safari Highlights:</strong> Known for its tree-climbing lions in the Ishasha sector and rich birdlife, the park offers boat trips on the Kazinga Channel and scenic crater lakes. It’s a haven for birders and wildlife lovers alike.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 2–5 days | 1–2 weeks</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('kibale-details')">4. Kibale Forest National Park</h3>
+        <div id="kibale-details" class="details">
+            <p><strong>Safari Highlights:</strong> Home to one of Africa’s highest densities of primates, Kibale offers unforgettable chimpanzee tracking. Walk through tropical rainforests alive with birds, butterflies, and monkeys. It’s a paradise for nature enthusiasts.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            <p><strong>Duration:</strong> 2–4 days | 1 week</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('rwenzori-details')">5. Rwenzori Mountains National Park</h3>
+        <div id="rwenzori-details" class="details">
+            <p><strong>Safari Highlights:</strong> These “Mountains of the Moon” provide challenging treks through glacier-carved valleys and alpine meadows. Rich in flora and fauna, the park is ideal for experienced hikers seeking remote wilderness.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 5–10 days | 2–3 weeks</p>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h3 onclick="toggleDetails('lakemburo-details')">6. Lake Mburo National Park</h3>
+        <div id="lakemburo-details" class="details">
+            <p><strong>Safari Highlights:</strong> A compact park filled with zebras, impalas, and hippos. Lake Mburo is perfect for walking and cycling safaris. The acacia woodlands and lakes are home to rich birdlife and relaxed game viewing.</p>
+            <p><strong>All our trips include:</strong></p>
+    <ul>
+        <li>Transport and exclusive use of safari vehicle</li>
+        <li>Services of an experienced English / Bilingual (French, German, Italian or Spanish) speaking guide.</li>
+        <li>Game drives as per itinerary</li>
+        <li>All park fees and government taxes.</li>
+    </ul>
+            
+            <p><strong>Duration:</strong> 2–4 days | Less than 1 week</p>
+        </div>
+    </div>
+</div>
+      <div id="videoSection" class="section">
+  <h2>Watch Experience</h2>
+  <video width="100%" controls>
+    <source src="dispay.video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+        <div id="about-us" class="section">
+            <h2>About Us</h2>
+            <p>At Mother Nature Safaris, we craft unforgettable safaris that awaken your sense of adventure and connect you with the wild, untamed beauty of East Africa. With deep roots in the region, we specialize in extraordinary, tailor-made safari experiences across Kenya, Tanzania (including Zanzibar), and Uganda—three of the continent’s most iconic and biodiverse destinations.
+
+We are more than just a tour operator—we are a passionate collective of travel designers, wildlife experts, and local guides who believe that nature is not just a place to visit, but something to be deeply experienced. From the thundering herds of the Great Migration in the Serengeti and Maasai Mara, to the serene shores of Zanzibar and the mystical jungles of Uganda where mountain gorillas dwell, our safaris are designed to immerse you in nature’s raw splendor and cultural richness.
+
+What sets us apart is our deep local knowledge and commitment to conservation and community-based tourism. We work hand-in-hand with local communities, eco-lodges, and conservation organizations to ensure that your travel not only inspires wonder, but also supports the preservation of wildlife and the empowerment of people.
+
+Every journey with Mother Nature Safaris is fully customizable—whether you’re a solo explorer, honeymoon couple, family, or photographer. We curate every detail to fit your travel style, comfort level, and interests. Our goal is simple: to offer you a seamless, soulful, and safe adventure you’ll remember forever.
+
+Step into the wild with Mother Nature Safaris, and let Africa move your heart.
+
+</p>
+            <h3>Why Choose Us</h3>
+            <p>Choosing Mother Nature Safaris means embracing the true spirit of East Africa—its land, people, and wildlife—through authentic, personalized, and sustainable travel. We specialize in Kenya, Tanzania/Zanzibar, and Uganda, offering tailor-made safaris led by expert local guides who enrich your journey with cultural depth and natural insight. From luxury lodges to gorilla treks and coastal escapes, we craft experiences to suit your style and pace. With a strong commitment to conservation and community, we ensure your travel gives back. From planning to execution, we offer seamless, safe, and supportive service, turning your African safari into a truly life-changing adventure.
+</p>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact Us</h2>
+            <form onsubmit="submitContactForm(event)">
+                <input type="text" id="contact-name" placeholder="Your Name" required>
+                <input type="email" id="contact-email" placeholder="Your Email" required>
+                <textarea id="contact-message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p><strong>Tel:</strong> +254 716962238</p>
+                <p><strong>Mobile:</strong> +254 712331664</p>
+                <p><strong>Email:</strong> <a href="mailto:info@mothernature.com">info@mothernature.com</a></p>
+            </div>
+        </div>
+    </main>
+  <footer>
+  <div class="footer-content">
+    <p><strong>Email:</strong> <a href="mailto:info@mother.com">info@mother.com</a></p>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com/YourCompanyUsername" target="_blank">
+        <img src="facebook-icon.png" alt="Facebook" width="32" height="32">
+      </a>
+      <a href="https://www.instagram.com/YourCompanyUsername" target="_blank">
+        <img src="instagram-icon.png" alt="Instagram" width="32" height="32">
+      </a>
+      <a href="https://www.linkedin.com/company/YourCompanyUsername" target="_blank">
+        <img src="linkedin-icon.png" alt="LinkedIn" width="32" height="32">
+      </a>
+      <a href="https://wa.me/+254712331664" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp" width="32" height="32">
+      </a>
+    </div>
+    <p>&copy; 2025 Mother Nature Safaris. All rights reserved.</p>
+  </div>
+</footer>
+    <script src="script.js"></script>
+    </body>
+    </html>
